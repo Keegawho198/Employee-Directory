@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+// import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
+import Table from "./components/Table";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -21,9 +22,9 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Friends List</Title>
+        <Title>Employee List</Title>
         {this.state.friends.map(friend => (
-          <FriendCard
+          <Table
             removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
